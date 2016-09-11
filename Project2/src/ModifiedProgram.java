@@ -1,3 +1,5 @@
+//printing multiple lines of text with a single statement
+
 
 public class ModifiedProgram {
 
@@ -5,7 +7,7 @@ public class ModifiedProgram {
 		// TODO Auto-generated method stub
 
 		System.out.print("Welcome to ");
-		System.out.println("Java Programming!");
+		System.out.println("Welcome\nto\nJava\nProgramming!");
 	}
 
 }
