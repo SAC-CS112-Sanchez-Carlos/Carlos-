@@ -1,13 +1,14 @@
 //Gradebook.java
-//Class decleration with one method
+//Class deceleration with one method that has a parameter
 
+public class Gradebook 
+{
 
-public class Gradebook {
+	//display a welcome message to the Gradebook user
+	public void displayMessage(String courseName)
+	{
 
-	//display a weslcome message to the Gradebook user
-	public void displayMessage(){
-
-		System.out.println("Welcome to the Gradebook!");
+		System.out.printf( "Welcome to the grade book for\n%s\n", courseName);
 	}
 	//end method displayMessage
 //end class Gradebook
