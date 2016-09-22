@@ -51,7 +51,7 @@ public class NumberGame {
 		try {Thread.sleep(1500); //pauses for 1.5 seconds before running the game again
 		}
 		catch(InterruptedException ex){
-		}
+	}
 		
 		}
 		
