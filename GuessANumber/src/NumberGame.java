@@ -13,7 +13,7 @@ public class NumberGame {
 		computerNumber = 1 + (int) (Math.random() * 9);// creates a random number between 1 and 10
 		System.out.println(computerNumber);
 		
-		while (playerInput.equalsIgnoreCase("Y")){ //runs the program again as long as the player wants
+		do { //runs the program again as long as the player wants
 			
 		
 		// Welcome to the game message and ask player for their guess
@@ -47,11 +47,12 @@ public class NumberGame {
 		playerInput = input.next(); //assigns player's input into the variable playerInput
 		
 		if (playerInput.equalsIgnoreCase("Y")){
-		System.out.println("Let's play again!"); //prints if player inputs Y
+		System.out.println("Let's play again!\n"); //prints if player inputs Y
 		replay = 1;
 		}
 		
 		else System.out.println("Goodbye.");//prints if player inputs something other than Y
 		}
+		while (playerInput.equalsIgnoreCase("Y"));
 	}
 }
