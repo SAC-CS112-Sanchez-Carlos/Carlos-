@@ -55,7 +55,7 @@ public class NumberGame {
 		
 		}
 		
-		if (!playerInput.equalsIgnoreCase("Y")) System.out.println("Goodbye.");//prints if player inputs something other than Y
+		if (!playerInput.equalsIgnoreCase("Y")) System.out.println("Goodbye.");//prints if player inputs something other than Y using ! to signify opposite
 		}
 		while (playerInput.equalsIgnoreCase("Y")); //continues the program while plater input is equal to "Y"
 	}
