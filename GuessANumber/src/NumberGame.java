@@ -11,9 +11,8 @@ public class NumberGame {
 		String playerInput = "Y"; // allows for input into the variable playerInput
 		
 		computerNumber = 1 + (int) (Math.random() * 9);// creates a random number between 1 and 10
-		System.out.println(computerNumber);
 		
-		do { //runs the program again as long as the player wants
+		do { //runs the program again as long as the player input Y
 			
 		
 		// Welcome to the game message and ask player for their guess
