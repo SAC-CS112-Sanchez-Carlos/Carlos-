@@ -1,13 +1,14 @@
-import java.util.Random;
 import java.util.Scanner;
 
 public class NumberGame {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 
 		int computerNumber = 0; // assigns computer's number
 		int playerGuess = 0; // assigns player's number
-
+		String playerInput; 
+		
 		computerNumber = 1 + (int) (Math.random() * 10);// creates a random number between 1 and 10
 		
 		// Welcome to the game message and ask player for their guess
@@ -25,13 +26,19 @@ public class NumberGame {
 			System.out.println("You didn't guess a number between 1 and 10."); //prints if player's guess was not between 1 and 10
 	}
 		else if (playerGuess > 0 && playerGuess <11 && playerGuess < computerNumber){
-			System.out.println("You guessed wrong. Try a higher number."); //player's guess is between 1 and 10 and is less than the random number
+			System.out.println("You guessed wrong. Try a higher number next time."); //player's guess is between 1 and 10 and is less than the random number
 	}
 		else if (playerGuess > 0 && playerGuess <11 && playerGuess > computerNumber){
-			System.out.println("You guessed wrong. Try a lower number."); //player's guess is between 1 and 10 and is more than the random number
+			System.out.println("You guessed wrong. Try a lower number next time."); //player's guess is between 1 and 10 and is more than the random number
 	}
-		System.out.println("\nThe number was " + computerNumber);
-
+		System.out.printf("\nThe number was " + computerNumber);
+		
+		System.out.println("\n\nWould you like to play again?\nIf yes, enter Y");	
+		playerInput = input.next();
+		
+		if (playerInput.equalsIgnoreCase("Y")){
+		System.out.println("Run the program again.");
+		}
+		else System.out.println("Goodbye.");
 	}
-
 }
