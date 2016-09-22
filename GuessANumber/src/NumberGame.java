@@ -45,14 +45,14 @@ public class NumberGame {
 		
 		if (playerInput.equalsIgnoreCase("Y")){
 		System.out.println("Let's play again!\n\n************************************************\n"); //prints if player inputs Y
+		
 		replay = 1;
-		try { 
-			Thread.sleep(1500);
+		
+		try {Thread.sleep(1500); //pauses for 1.5 seconds before running the game again
 		}
-		catch(InterruptedException ex)
-		{
-
+		catch(InterruptedException ex){
 		}
+		
 		}
 		
 		if (!playerInput.equalsIgnoreCase("Y")) System.out.println("Goodbye.");//prints if player inputs something other than Y
