@@ -67,7 +67,7 @@ public class dice {
 			gamesplayed++;
 
 			/* displays wins and losses */
-			String ratio = String.format("You have won %d times and lost %d times.", wins, losses);
+			String ratio = String.format("You have won %d time(s) and lost %d time(s).", wins, losses);
 			JOptionPane.showMessageDialog(null, ratio);
 
 			/* displays number of games played */
@@ -79,11 +79,11 @@ public class dice {
 					numberevens);
 			JOptionPane.showMessageDialog(null, oddsandevens);
 
-			int winpercent = (wins/gamesplayed);
-			winpercent = winpercent*100;
+			/*calculates win percentage*/
+			int winpercent = (wins * 100)/gamesplayed;
 			String percentage = String.format("Your win percentage is %d percent.", winpercent);
 			JOptionPane.showMessageDialog(null, percentage);			
-		
+			
 			/*
 			 * displays input message asking if the player would like to play
 			 * again
