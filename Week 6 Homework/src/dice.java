@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 import javax.swing.JOptionPane;
 
 public class dice {
@@ -83,6 +85,15 @@ public class dice {
 			int winpercent = (wins * 100)/gamesplayed;
 			String percentage = String.format("Your win percentage is %d percent.", winpercent);
 			JOptionPane.showMessageDialog(null, percentage);			
+			
+			String[] history = new String[4];
+			
+			history[0] = "Wins: " + wins;
+			history[1] = "\nLosses: " + losses;
+			history[2] = "\nNumber of odds:" + numberodds + "\nNumber of evens: "+ numberevens;
+			history[3] = "\nWin percentage: " + winpercent;
+			
+		    JOptionPane.showMessageDialog(null, Arrays.toString(history));
 			
 			/*
 			 * displays input message asking if the player would like to play
