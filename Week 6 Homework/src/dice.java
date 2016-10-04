@@ -1,3 +1,4 @@
+
 import java.util.Arrays;
 
 import javax.swing.JOptionPane;
@@ -22,10 +23,6 @@ public class dice {
 			int diceroll = 1 + (int) (Math.random() * 6); // rolls number
 															// between 1 and 6
 
-			String dicerollanswer = String.valueOf(diceroll);
-			JOptionPane.showMessageDialog(null, dicerollanswer); // displays
-																	// answer to
-																	// dice roll
 
 			/* asks player whether they think the dice rolled even or odd */
 			String odd_or_even = JOptionPane
@@ -68,29 +65,17 @@ public class dice {
 			/* adds 1 to the gamesplayed counter after every game played */
 			gamesplayed++;
 
-			/* displays wins and losses */
-			String ratio = String.format("You have won %d time(s) and lost %d time(s).", wins, losses);
-			JOptionPane.showMessageDialog(null, ratio);
-
-			/* displays number of games played */
-			String played = String.format("You have played %d game(s).", gamesplayed);
-			JOptionPane.showMessageDialog(null, played);
-
-			/* displays number of odds and evens the computer has generated */
-			String oddsandevens = String.format("The system has generated %d odd and %d evens.", numberodds,
-					numberevens);
-			JOptionPane.showMessageDialog(null, oddsandevens);
 
 			/*calculates win percentage*/
 			int winpercent = (wins * 100)/gamesplayed;
-			String percentage = String.format("Your win percentage is %d percent.", winpercent);
-			JOptionPane.showMessageDialog(null, percentage);			
 			
+			
+			/*displays game history*/
 			String[] history = new String[4];
 			
 			history[0] = "Wins: " + wins;
 			history[1] = "\nLosses: " + losses;
-			history[2] = "\nNumber of odds:" + numberodds + "\nNumber of evens: "+ numberevens;
+			history[2] = "\nNumber of odds rolled:" + numberodds + "\nNumber of evens rolled: "+ numberevens;
 			history[3] = "\nWin percentage: " + winpercent;
 			
 		    JOptionPane.showMessageDialog(null, Arrays.toString(history));
