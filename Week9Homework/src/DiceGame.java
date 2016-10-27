@@ -5,8 +5,8 @@ public class DiceGame {
 	public static void main(String[] args) {
 	int value = 0; // declares and initializes variable roll
 	int points = 0; //declares and initializes variable points
-	int tries = 0;	
-	String response = "Y";
+	int tries = 0;	//declares int tries
+	String response = "Y"; //declares int response
 
 	do{
 		/* asks user for input of number of dice to roll */
@@ -30,21 +30,22 @@ public class DiceGame {
 
 		
 		if (guess==roll){
-			System.out.println("You are correct!\n+1 point");
+			System.out.println("You are correct!\n+1 point"); //response if user guesses correct
 			points++;
 		}
 		else {
-		System.out.println("You are incorrect. Guess again.");
+		System.out.println("You are incorrect. Guess again.");//response if user guesses incorrect
 		}
 		/*output what the dice rolled*/
 		System.out.println("The dice roll turned up " + roll + "."
 				+ "\nYour current point total is: " + points);
 		
-		System.out.println("Do you want to play again?");
-		response = input.next();
+		System.out.println("Do you want to play again?");//seeks input from user on whether to play again
+		response = input.next();//assigns input to response
 	
+		/*continues if Y or Yes are entered*/
 	}while (response.equalsIgnoreCase("Y") || (response.equalsIgnoreCase("Yes")));
 	
-	System.out.println("Goodbye.");
+	System.out.println("Goodbye."); //prints goodbye if user chooses to type something besides y or yes
 	}
 }
