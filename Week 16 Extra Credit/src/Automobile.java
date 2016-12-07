@@ -1,4 +1,4 @@
-public class Automobile implements Runnable, E {
+public class Automobile implements Runnable {
 
 	public int m_year = 0, m_gear = 0, m_operatingCycle = 0, m_currentSpeed = 0, m_currentGear = 0;
 	public String m_make = "", m_model = "", m_color = "", m_name = "";
@@ -101,7 +101,7 @@ public class Automobile implements Runnable, E {
 			System.out.println(m_name + " goes Prrr.");
 		else
 			System.out.println(m_name + " goes Vroom.");
-		if (m_distanceTraveled > 100) { //changed 100 to 1000
+		if (m_distanceTraveled > 100) {
 			System.out.println(m_name + " makes a Sputter...");
 			throw new Exception();
 		}
