@@ -95,17 +95,18 @@ public class Automobile implements Runnable {
 		return m_currentSpeed;
 	}
 
-	public float getDistanceTraveled() throws Exception { // returns distance
-															// traveled
+	public synchronized float getDistanceTraveled() throws Exception { // returns distance
+
+		// traveled
 		if (m_distanceTraveled < 10)
 			System.out.println(m_name + " goes Prrr.");
 		else
 			System.out.println(m_name + " goes Vroom.");
 		if (m_distanceTraveled > 100) {
 			System.out.println(m_name + " makes a Sputter...");
-			throw new Exception();
+			throw new ArithmeticException();
 		}
-
+		Thread.sleep(1000);
 		return m_distanceTraveled;
 	}
 
@@ -116,7 +117,7 @@ public class Automobile implements Runnable {
 	}
 
 	
-	public void run() {
+	public synchronized void run() {
 		String info = "Car is a " + m_color + " " + m_year + " " + m_make + " " + m_model + " nicknamed " + m_name + ". It has " + m_gear + " gears.";
 			System.out.println(info);
 			System.out.println(m_name + "'s distance = " + m_distanceTraveled + ".\n");
